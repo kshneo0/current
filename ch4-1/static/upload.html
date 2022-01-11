@@ -1,0 +1,13 @@
+{{ define "content" }}
+
+<form
+  id="uploadform"
+  enctype="multipart/form-data"
+  action="/upload"
+  method="POST"
+>
+  <input type="file" name="file" multiple />
+  <button type="submit" onclick="">Submit</button>
+</form>
+
+{{ end }}

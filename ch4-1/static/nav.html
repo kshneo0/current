@@ -1,0 +1,13 @@
+{{ define "nav" }} {{ if .User.Authenticated }}
+<img src="/uploads/{{.User.Username}}/profile.png" width="64" />
+<a href="/upload">Upload a Picture</a>
+<p>{{.User.Username}}</p>
+<form id="logoutForm" action="/logout" method="POST">
+  <input type="hidden" />
+  <button type="submit">Logout</button>
+</form>
+{{ end }}
+<a href="/">Home</a>
+<a href="/login">Login</a>
+<a href="/newUser">Sign Up</a>
+{{ end }}
